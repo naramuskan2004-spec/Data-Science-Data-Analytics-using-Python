@@ -86,7 +86,3 @@ Three factors heavily influenced survival on the Titanic:
 3. **Age** – Younger passengers, especially children, were prioritized
 
 ---
-
-## 👤 Author
-**Your Name**
-Data Science with Python Intern – Maincrafts Technology
