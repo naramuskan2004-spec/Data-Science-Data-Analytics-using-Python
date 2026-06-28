@@ -84,3 +84,100 @@ Three factors heavily influenced survival on the Titanic:
 3. **Age** – Younger passengers, especially children, were prioritized
 
 ---
+
+#  Titanic Dataset — Mini EDA
+
+---
+
+##  Objective
+Perform a deeper Exploratory Data Analysis (EDA) on the Titanic dataset using
+advanced data cleaning, feature engineering, and visualizations.
+
+---
+
+##  Dataset
+- **Source:** [Kaggle – Titanic Dataset](https://www.kaggle.com/c/titanic)
+- **Size:** 891 passengers × 15 columns
+
+---
+
+##  Tools & Libraries
+| Tool | Purpose |
+|------|---------|
+| Python | Programming language |
+| Pandas | Data cleaning & analysis |
+| Seaborn | Data visualization |
+| Matplotlib | Data visualization |
+| Google Colab | Development environment |
+
+---
+
+##  What I Did
+1. Loaded the Titanic dataset
+2. Cleaned missing values:
+   - `Age` → filled with mean
+   - `Deck` → dropped (77% missing)
+3. Engineered a new feature → `family_size = SibSp + Parch`
+4. Analyzed 3 deeper questions
+5. Built 3 professional visualizations
+
+---
+
+## Questions Answered
+
+### Q1: Did Embarkation Port affect survival?
+| Port | Survival Rate |
+|------|--------------|
+| Cherbourg (C) | 55%  |
+| Queenstown (Q) | 39% |
+| Southampton (S) | 34% |
+
+>  Cherbourg had the most 1st class passengers — port didn't cause survival, wealth did!
+
+### Q2: Did Family Size affect survival?
+| Family Size | Survival Rate |
+|-------------|--------------|
+| 0 (alone) | 30% |
+| 1 | 55% |
+| 2 | 58% |
+| 3 | 72% |
+| 4 | 20% |
+| 5+ | 14% |
+
+>  Small families (1–3) helped each other. Solo travelers and large families struggled.
+
+### Q3: Survival rate by Age Group?
+| Age Group | Survival Rate |
+|-----------|--------------|
+| Child (0–12) | 58% |
+| Teen (13–18) | 43% |
+| Young Adult (19–30) | 33% |
+| Adult (31–50) | 42% |
+| Senior (51+) | 34% |
+
+> Children were prioritized during evacuation.
+
+---
+
+## Visualizations
+- Histogram – Age distribution with mean line
+- Heatmap – Correlation between all variables
+- Bar chart – Survival rate by family size
+
+---
+
+## Key Heatmap Findings
+| Variables | Correlation | Meaning |
+|-----------|------------|---------|
+| pclass vs fare | -0.55 | Higher class = more expensive |
+| survived vs pclass | -0.34 | Higher class number = lower survival |
+| sibsp vs family_size | 0.89 | Strongly related (expected) |
+| survived vs fare | 0.26 | Pricier ticket = slightly better survival |
+
+---
+
+## Conclusion
+Three deeper factors influenced Titanic survival:
+1. **Embarkation Port** – Driven by hidden wealth patterns behind each port
+2. **Family Size** – Small families (size 3) had best survival (72%)
+3. **Age Group** – Children were prioritized, seniors struggled most
